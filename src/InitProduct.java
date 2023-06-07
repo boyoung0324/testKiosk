@@ -71,7 +71,7 @@ public class InitProduct {
             System.out.println("상품이 삭제되었습니다.");
         }else{
             System.out.println("해당 메뉴가 없습니다.");
-            return;
+            delete();
         }
 
     }

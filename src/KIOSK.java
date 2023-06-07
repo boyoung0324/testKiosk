@@ -4,5 +4,6 @@ public class KIOSK {
         //실행만
         Mcdonald mc = new Mcdonald();
         mc.kiosk();
+
     }
 }

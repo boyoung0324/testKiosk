@@ -72,6 +72,9 @@ public class Mcdonald {
             case 4:
                 cartList();
                 break;
+            case 5:
+                cancelPrint();
+                break;
             case 6:
                 total_print();
                 break;
@@ -240,6 +243,8 @@ public class Mcdonald {
         int choice = sc.nextInt();
         if (choice == 0) {
             kiosk();
+        } else {
+            returnMain();
         }
     }
 
@@ -265,5 +270,18 @@ public class Mcdonald {
         }
     }
 
+    public void cancelPrint() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("진행하던 주문을 취소하시겠습니까?");
+        System.out.println("1. 확인\t 2. 취소");
+        int choice = sc.nextInt();
 
+        if (choice == 1) {
+            System.out.println("진행하던 주문이 취소되었습니다.");
+            order.clearCart();
+            kiosk();
+        } else if (choice == 2) {
+            kiosk();
+        }
+    }
 }
