@@ -129,6 +129,14 @@ public class Order {
 
     public void recentOrder(){//최근 주문목록 3개 불러오는 메서드 Arraylist로 대기목록에 작성이 되어서 for문으로 하나씩 불러왔습니다.
 
+        System.out.println("[ 최근 주문 목록 3개 ] ");
+
+        Collections.reverse(waitList);
+        for (int i = 0; i < 3; i++) {
+            System.out.printf("주문번호 : %d | %s | %d원 | 요청사항 : %s | 주문일시 : %s | %s\n",
+                    waitList.get(i).getBno(),waitList.get(i).getName(),waitList.get(i).getPrice(),waitList.get(i).getRequest(),waitList.get(i).getOrderDate(),waitList.get(i).getState());
+        }
+
     }
 
 

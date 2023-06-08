@@ -19,12 +19,12 @@ public class Mcdonald {
 
         mainOrderList.add(new Menu("장바구니", "장바구니를 확인 후 주문합니다"));
         mainOrderList.add(new Menu("주문취소", "진행중인 주문을 취소하고 장바구니를 비웁니다"));
+        mainOrderList.add(new Menu("주문 현황", "주문 현황을 보여줍니다"));
 
         mainManagerList.add(new Menu("대기 목록", "대기 중인 주문을 보여줍니다."));
         mainManagerList.add(new Menu("완료 목록", "완료된 주문을 보여줍니다."));
         mainManagerList.add(new Menu("상품 생성", "새 상품을 등록합니다."));
         mainManagerList.add(new Menu("상품 삭제", "상품을 삭제합니다."));
-        mainManagerList.add(new Menu("주문 현황", "주문 현황을 보여줍니다"));
     }
 
 
@@ -40,9 +40,7 @@ public class Mcdonald {
         java.lang.System.out.println("[ORDER MENU]");
         nextnum = mainPrint(nextnum, mainOrderList);
         java.lang.System.out.println();
-
-        java.lang.System.out.println("[MANAGER MENU]");
-        mainPrint(nextnum, mainManagerList);
+        System.out.println("0. MANAGER MENU로 이동");
         java.lang.System.out.println("-------------------------------------");
 
         ChoiceMenu();
@@ -77,25 +75,53 @@ public class Mcdonald {
                 cancelPrint();
                 break;
             case 6:
-                total_print();
-                break;
-            case 7:
-                total2_print();
-                break;
-            case 8:
-                writeComplet();
-                break;
-            case 9:
-                delComplet();
-                break;
-            case 10:
                 order.recentOrder();
+                break;
+            case 0:
+                managerPrint();
+                break;
 
             default:
                 java.lang.System.out.println("해당하는 메뉴가 없습니다.");
                 returnMain();
         }
     }
+
+    public void managerPrint() {
+        java.lang.System.out.println("[MANAGER MENU]");
+        mainPrint(1, mainManagerList);
+        System.out.println();
+        System.out.println("0. MAIN MENU로 이동");
+
+        choiceManagerMenu();
+    }
+
+    public void choiceManagerMenu() {
+        Scanner sc = new Scanner(System.in);
+        int choice = sc.nextInt();
+        switch (choice) {
+            case 1:
+                waitPrint();
+                break;
+            case 2:
+                completionPrint();
+                break;
+            case 3:
+                writeComplet();
+                break;
+            case 4:
+                delComplet();
+                break;
+            case 0:
+                kiosk();
+                break;
+
+            default:
+                java.lang.System.out.println("해당하는 메뉴가 없습니다.");
+                returnManagerMenu();
+        }
+    }
+
 
     public void burgerPrint() {
         java.lang.System.out.println("★ 맥도날드에 오신걸 환영합니다 ★");
@@ -185,13 +211,13 @@ public class Mcdonald {
         ip.write();
         java.lang.System.out.println();
         java.lang.System.out.println("상품이 등록되었습니다. ");
-        returnMain();
+        returnManagerMenu();
     }
 
     void delComplet() { //지우기 완료
         ip.delete();
 
-        returnMain();
+        returnManagerMenu();
     }
 
 
@@ -251,25 +277,37 @@ public class Mcdonald {
         }
     }
 
-    public void total_print() { //대기 상품 목록
+    public void returnManagerMenu() {
+        Scanner sc = new Scanner(java.lang.System.in);
+        java.lang.System.out.println();
+        java.lang.System.out.println("0. 관리메뉴로 돌아가기");
+        int choice = sc.nextInt();
+        if (choice == 0) {
+            managerPrint();
+        } else {
+            returnManagerMenu();
+        }
+    }
+
+    public void waitPrint() { //대기 상품 목록
         if (order.waitList.size() != 0) {
             order.waitListPrint();
             java.lang.System.out.println();
             java.lang.System.out.println("완료되었습니다.");
-            returnMain();
+            returnManagerMenu();
         } else {
             java.lang.System.out.println("[ 대기중인 상품이 없습니다. ]");
-            returnMain();
+            returnManagerMenu();
         }
     }
 
-    public void total2_print() { //완료 상품 목록
+    public void completionPrint() { //완료 상품 목록
         if (order.compList.size() != 0) {
             order.compListPrint();
-            returnMain();
+            returnManagerMenu();
         } else {
             java.lang.System.out.println("[ 완료된 상품이 없습니다. ]");
-            returnMain();
+            returnManagerMenu();
         }
     }
 
