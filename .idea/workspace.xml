@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="07085c9b-dfbe-4890-97ba-45e764b458b7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InitProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InitProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KIOSK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/KIOSK.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mcdonald.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mcdonald.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product.java" afterDir="false" />
     </list>
@@ -45,7 +42,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/Kiosk-by&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/Kiosk10&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -98,6 +95,24 @@
       <workItem from="1686116003513" duration="10675000" />
       <workItem from="1686128338622" duration="6391000" />
       <workItem from="1686138764383" duration="274000" />
+      <workItem from="1686139314618" duration="1380000" />
+      <workItem from="1686141614985" duration="6000" />
+      <workItem from="1686141635820" duration="472000" />
+      <workItem from="1686149201198" duration="788000" />
+      <workItem from="1686152005742" duration="4000" />
+      <workItem from="1686152143302" duration="287000" />
+      <workItem from="1686183368514" duration="2402000" />
+      <workItem from="1686185830480" duration="1465000" />
+      <workItem from="1686188211177" duration="19000" />
+      <workItem from="1686188578870" duration="16000" />
+      <workItem from="1686191546737" duration="49000" />
+      <workItem from="1686191975830" duration="158000" />
+      <workItem from="1686192142923" duration="198000" />
+      <workItem from="1686192372342" duration="22000" />
+      <workItem from="1686195399087" duration="481000" />
+      <workItem from="1686195903513" duration="45000" />
+      <workItem from="1686196118406" duration="3768000" />
+      <workItem from="1686200175475" duration="22000" />
     </task>
     <servers />
   </component>

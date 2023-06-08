@@ -24,6 +24,7 @@ public class Mcdonald {
         mainManagerList.add(new Menu("완료 목록", "완료된 주문을 보여줍니다."));
         mainManagerList.add(new Menu("상품 생성", "새 상품을 등록합니다."));
         mainManagerList.add(new Menu("상품 삭제", "상품을 삭제합니다."));
+        mainManagerList.add(new Menu("주문 현황", "주문 현황을 보여줍니다"));
     }
 
 
@@ -87,6 +88,8 @@ public class Mcdonald {
             case 9:
                 delComplet();
                 break;
+            case 10:
+                order.recentOrder();
 
             default:
                 java.lang.System.out.println("해당하는 메뉴가 없습니다.");
@@ -249,8 +252,8 @@ public class Mcdonald {
     }
 
     public void total_print() { //대기 상품 목록
-        if (order.totalOrderList.size() != 0) {
-            order.totalOrderPrint();
+        if (order.waitList.size() != 0) {
+            order.waitListPrint();
             java.lang.System.out.println();
             java.lang.System.out.println("완료되었습니다.");
             returnMain();
@@ -261,8 +264,8 @@ public class Mcdonald {
     }
 
     public void total2_print() { //완료 상품 목록
-        if (order.totalOrderList2.size() != 0) {
-            order.totalOrder2Print();
+        if (order.compList.size() != 0) {
+            order.compListPrint();
             returnMain();
         } else {
             java.lang.System.out.println("[ 완료된 상품이 없습니다. ]");
